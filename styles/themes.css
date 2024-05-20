@@ -4,3 +4,42 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --main-content-font-weight: 400;
+  --card-header-font-weight: 700;
+  --background-color: #f5f5f5;
+  --accent-color: #000000;
+  --background-image: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+}
+
+
+
+:root.theme-dark {
+  --main-content-font-weight: 465;
+  --card-header-font-weight: 785;
+  --background-color: #000;
+  --accent-color: #00CC14;
+  --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-content-font-weight: 465;
+    --card-header-font-weight: 785;
+    --background-color: #000;
+    --accent-color: #00CC14;
+    --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+  }
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-content-font-weight: 400;
+  --card-header-font-weight: 700;
+  --background-color: #f5f5f5;
+  --accent-color: #000000;
+  --background-image: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+
+}

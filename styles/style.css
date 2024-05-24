@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -33,7 +32,7 @@
 }
 
 button {
-  background-color: transparent;
+  background-color: var(--background-color);
   border: none;
   margin: 0;
   padding: 0;
@@ -60,19 +59,18 @@ button {
 
 .header-content {
   display: grid;
-  justify-items : center;
+  justify-items: center;
   gap: 20px;
 }
 
 .main-header {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 .subheader {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .theme-menu__list {
-
   display: grid;
   gap: 14px;
   font-size: 14px;
@@ -81,13 +79,12 @@ button {
 .theme-menu__button {
   text-transform: uppercase;
   position: relative;
- 
 }
 
 .theme-menu__button:disabled::before {
-content: '▶';
-position:absolute;
-left:-20px;
+  content: "▶";
+  position: absolute;
+  left: -20px;
 }
 
 .main-content {
@@ -104,7 +101,7 @@ left:-20px;
   background-color: var(--background-color);
   outline: 1px solid var(--accent-color);
 }
-.card-header  {
+.card-header {
   font-weight: 785;
   outline: 1px solid var(--accent-color);
   padding: 3px 10px;
@@ -116,7 +113,6 @@ left:-20px;
   padding-inline-start: 25px;
   padding-inline-end: 25px;
   font-weight: 465;
-
 }
 
 .card-image {
@@ -134,7 +130,7 @@ left:-20px;
   min-inline-size: 169px;
   margin-block-start: 25px;
   margin-block-end: 25px;
-  margin-inline-end:40px;
+  margin-inline-end: 40px;
 }
 
 .button__text {
@@ -143,5 +139,34 @@ left:-20px;
   line-height: 0.9;
   outline: 1px solid var(--accent-color);
   padding: 12.5px 37px;
+}
 
+.button__text-nooutline {
+  outline: none;
+  padding: 0px;
+}
+
+.save-button {
+  outline: 1px solid var(--accent-color);
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  place-items: center;
+  padding: 15px 19px;
+ inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
+ justify-self: center;
+ margin-block-end: 103px;
+}
+
+.floppy {
+  max-inline-size: 21px;
+  aspect-ratio: 1 / 1;
+}
+
+@media (width <= 375px) {
+  .save-button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }

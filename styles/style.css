@@ -14,7 +14,7 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 320px;  
   min-block-size: 100dvb;
   background-color: var(--background-color);
   color: var(--accent-color);
@@ -22,7 +22,6 @@
   background-size: cover;
   display: grid;
   place-items: center;
-  gap: 100px;
 }
 
 @supports (font-variation-settings: normal) {
@@ -33,7 +32,8 @@
 
 button {
   background-color: var(--background-color);
-  border: none;
+  border: 0;
+  outline: none;
   margin: 0;
   padding: 0;
   text-align: inherit;
@@ -47,14 +47,15 @@ button {
   font-family: "PressStart2P-Regular", sans-serif;
   display: grid;
   justify-items: center;
+  gap: 25px;
   padding-block-start: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
   padding-block-end: 25px;
-  gap: 25px;
   background-color: var(--background-color);
   outline: 1px solid var(--accent-color);
   inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   block-size: clamp(20.438rem, 3.85vw + 19.535rem, 23rem);
   margin-block-start: 100px;
+  margin-block-end: 100px;
 }
 
 .header-content {
@@ -70,9 +71,15 @@ button {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
+.theme-menu {
+  display: grid;
+  justify-self: end;
+  margin-inline-end: clamp(8.313rem, 15.399vw + 4.703rem, 18.563rem);
+}
+
 .theme-menu__list {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   font-size: 14px;
 }
 
@@ -89,7 +96,8 @@ button {
 
 .main-content {
   display: grid;
-  gap: 50px;
+  gap: 53px;
+  inline-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
 }
 
 .card {
@@ -97,29 +105,59 @@ button {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   color: var(--accent-color);
-  inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   background-color: var(--background-color);
   outline: 1px solid var(--accent-color);
 }
 .card-header {
-  font-weight: 785;
-  outline: 1px solid var(--accent-color);
-  padding: 3px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px 24px 8px 10px;
+  line-height: 19px;
 }
 .card-content {
   display: grid;
   gap: 27px;
   padding-block-start: 25px;
-  padding-inline-start: 25px;
+  padding-inline-start: 25px; 
   padding-inline-end: 25px;
   font-weight: 465;
 }
 
 .card-image {
   outline: 1px solid var(--accent-color);
-  inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
-  aspect-ratio: 1 / 1;
+  block-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
+  inline-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
+  object-fit: cover;
 }
+
+.image-wrapper {
+  position: relative;
+  mix-blend-mode: hard-light;
+}
+
+.label-text {
+  color: var(--accent-color);
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-shadow:
+  -1px 0 var(--stroke-color), 
+ 0 1px var(--stroke-color), 
+ 1px 0 var(--stroke-color), 
+ 0 -1px var(--stroke-color);
+}
+
+
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .label-text {
+      -webkit-text-stroke: 1px var(--stroke-color);
+      text-stroke: 1px var(--stroke-color);
+      text-shadow: none;
+  }
+} 
 
 .card-button {
   display: grid;
@@ -129,8 +167,8 @@ button {
   gap: 12px;
   min-inline-size: 169px;
   margin-block-start: 25px;
-  margin-block-end: 25px;
-  margin-inline-end: 40px;
+  margin-block-end: 27px;
+  margin-inline-end: 25px;
 }
 
 .button__text {
@@ -153,20 +191,24 @@ button {
   gap: 8px;
   place-items: center;
   padding: 15px 19px;
- inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
- justify-self: center;
- margin-block-end: 103px;
+  justify-self: center;
+  margin-block-end: 100px;
+  margin-block-start: 50px;
 }
 
-.floppy {
-  max-inline-size: 21px;
-  aspect-ratio: 1 / 1;
-}
-
-@media (width <= 375px) {
+@media (375px <= width < 1440px) {
   .save-button {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .floppy {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
+  .label-text {
+    inset-inline-end: 13px;
   }
 }

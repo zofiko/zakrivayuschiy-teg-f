@@ -86,13 +86,59 @@ button {
 .theme-menu__button {
   text-transform: uppercase;
   position: relative;
+  transition: color 0.3s ease;
 }
+
+
+.theme-menu__button:hover {
+  color: var(--opacity-color);
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled {
+  color: var(--opacity-color);
+  pointer-events: none;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: var(--opacity-color);
+  transition: width 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+.theme-menu__button:focus-visible {
+  color: var(--opacity-color);
+} 
+
+@keyframes indicator {
+  0% {
+    left: -20px;
+  }
+
+  100% {
+    left: -16px;
+  }
+}
+
 
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
   left: -20px;
+  animation: .5s ease-in-out infinite alternate indicator;
 }
+
 
 .main-content {
   display: grid;
@@ -159,7 +205,7 @@ button {
   }
 } 
 
-.card-button {
+.card-wrapper {
   display: grid;
   grid-template-columns: auto auto;
   justify-self: end;
@@ -169,7 +215,22 @@ button {
   margin-block-start: 25px;
   margin-block-end: 27px;
   margin-inline-end: 25px;
+
 }
+
+.card__like-button {
+  transition: box-shadow 0.3s;
+
+}
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+
+  box-shadow: 2px 2px var(--accent-color);
+}
+
 
 .button__text {
   font-family: var(--accent-font);

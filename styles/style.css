@@ -14,7 +14,7 @@
 */
 
 .page {
-  min-inline-size: 320px;  
+  min-inline-size: 320px;
   min-block-size: 100dvb;
   background-color: var(--background-color);
   color: var(--accent-color);
@@ -89,7 +89,6 @@ button {
   transition: color 0.3s ease;
 }
 
-
 .theme-menu__button:hover {
   color: var(--opacity-color);
   cursor: pointer;
@@ -104,8 +103,8 @@ button {
   outline: none;
 }
 
-.theme-menu__button::after{
-  content: '';
+.theme-menu__button::after {
+  content: "";
   display: block;
   width: 0%;
   height: 2px;
@@ -119,7 +118,7 @@ button {
 
 .theme-menu__button:focus-visible {
   color: var(--opacity-color);
-} 
+}
 
 @keyframes indicator {
   0% {
@@ -131,14 +130,12 @@ button {
   }
 }
 
-
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
   left: -20px;
-  animation: .5s ease-in-out infinite alternate indicator;
+  animation: 0.5s ease-in-out infinite alternate indicator;
 }
-
 
 .main-content {
   display: grid;
@@ -164,7 +161,7 @@ button {
   display: grid;
   gap: 27px;
   padding-block-start: 25px;
-  padding-inline-start: 25px; 
+  padding-inline-start: 25px;
   padding-inline-end: 25px;
   font-weight: 465;
 }
@@ -188,22 +185,17 @@ button {
   inset-inline-end: 25px;
   font-family: var(--accent-font);
   font-size: 14px;
-  text-shadow:
-  -1px 0 var(--stroke-color), 
- 0 1px var(--stroke-color), 
- 1px 0 var(--stroke-color), 
- 0 -1px var(--stroke-color);
+  text-shadow: -1px 0 var(--stroke-color), 0 1px var(--stroke-color),
+    1px 0 var(--stroke-color), 0 -1px var(--stroke-color);
 }
 
-
-
-@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .label-text {
-      -webkit-text-stroke: 1px var(--stroke-color);
-      text-stroke: 1px var(--stroke-color);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
+    text-shadow: none;
   }
-} 
+}
 
 .card-wrapper {
   display: grid;
@@ -215,38 +207,33 @@ button {
   margin-block-start: 25px;
   margin-block-end: 27px;
   margin-inline-end: 25px;
-
 }
 
 .card__like-button {
+  position: relative;
+  outline: 1px solid var(--accent-color);
+  padding: 12.5px 37px;
   transition: box-shadow 0.3s;
-
+  z-index: 1;
+  overflow: hidden;
 }
+
 .card__like-button:focus {
   outline: none;
 }
 
 .card__like-button:focus-visible {
-
   box-shadow: 2px 2px var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
-
 
 .button__text {
   font-family: var(--accent-font);
   font-size: 14px;
-  line-height: 0.9;
-  outline: 1px solid var(--accent-color);
-  padding: 12.5px 37px;
-}
-
-.button__text-nooutline {
-  outline: none;
-  padding: 0px;
 }
 
 .save-button {
-  outline: 1px solid var(--accent-color);
+  outline: 2px solid var(--accent-color);
   display: grid;
   grid-template-columns: auto auto;
   gap: 8px;
@@ -255,6 +242,36 @@ button {
   justify-self: center;
   margin-block-end: 100px;
   margin-block-start: 50px;
+  transition: box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card__like-button:before,
+.save-button:before {
+  content: "";
+  position: absolute;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -1;
+  transition: right 0.5s ease-in-out;
+}
+.card__like-button:hover:before,
+.save-button:hover:before {
+  right: 0;
+}
+
+.save-button:focus {
+  outline: none;
+}
+
+.save-button:focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 @media (375px <= width < 1440px) {

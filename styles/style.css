@@ -230,10 +230,30 @@ button {
 .button__text {
   font-family: var(--accent-font);
   font-size: 14px;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--blend-color);
 }
 
-.save-button {
+
+.card__icon-button {
+  border: 2.5px solid transparent;
+  transition: .3s ease outline;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
+}
+
+
+
+.save-button {
+  outline: 1px solid var(--accent-color);
   display: grid;
   grid-template-columns: auto auto;
   gap: 8px;
@@ -272,6 +292,14 @@ button {
 .save-button:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
   outline: 1px solid var(--accent-color);
+}
+
+.floppy {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--blend-color);
+
 }
 
 @media (375px <= width < 1440px) {

@@ -12,6 +12,7 @@
   --accent-color: #000000;
   --stroke-color: #fafafa ;
   --opacity-color: rgba(0, 0, 0, 0.6);
+  --blend-color: #fafafa;
   --background-image: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7, #1a1a1a);
 }
 
@@ -22,6 +23,7 @@
   --card-header-font-weight: 785;
   --background-color: #000;
   --accent-color: #00CC14;
+  --blend-color: #00CC14;
   --stroke-color: #000;
   --opacity-color: rgba(0, 204, 20, 0.6);
   --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
@@ -33,6 +35,7 @@
     --card-header-font-weight: 785;
     --background-color: #000;
     --accent-color: #00CC14;
+    --blend-color: #00CC14;
     --stroke-color: #000;
     --opacity-color: rgba(0, 204, 20, 0.6);
     --background-image: repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
@@ -48,6 +51,7 @@
   --accent-color: #000000;
   --background-image: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --stroke-color: #fafafa;
+  --blend-color: #fafafa;
   --opacity-color: rgba(0, 0, 0, 0.6);
 }
 }

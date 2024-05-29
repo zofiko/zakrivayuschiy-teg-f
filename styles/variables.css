@@ -9,5 +9,6 @@
   --stroke-color: #fafafa;
   --opacity-color: rgba(0, 0, 0, 0.6);
   --blend-color: #fafafa;
-
+  --contour-color:  #000000;
+  --fill-color: red;
 }

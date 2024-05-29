@@ -318,3 +318,12 @@ button {
     inset-inline-end: 13px;
   }
 }
+
+.card__icon-button .core {
+  transition: fill .3s linear;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+}
+

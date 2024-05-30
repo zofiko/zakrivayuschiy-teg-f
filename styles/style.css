@@ -197,15 +197,15 @@ button {
   }
 }
 
+
 .card-wrapper {
   display: grid;
   grid-template-columns: auto auto;
   justify-self: end;
-  align-items: center;
-  gap: 12px;
+  place-items: center;
   min-inline-size: 169px;
-  margin-block-start: 25px;
-  margin-block-end: 27px;
+  margin-block-start: 10px;
+  margin-block-end: 13px;
   margin-inline-end: 25px;
 }
 
@@ -243,6 +243,7 @@ button {
 .card__icon-button {
   border: 2.5px solid transparent;
   transition: 0.3s ease outline;
+  padding-top: 14px;
 }
 
 .card__icon-button:focus {
@@ -318,6 +319,7 @@ button {
     inset-inline-end: 13px;
   }
 }
+
 
 .card__icon-button .core {
   fill: transparent;

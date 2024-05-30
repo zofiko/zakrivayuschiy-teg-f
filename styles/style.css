@@ -211,8 +211,11 @@ button {
 
 .card__like-button {
   position: relative;
+  display: grid;
+  justify-content: center;
   outline: 1px solid var(--accent-color);
-  padding: 12.5px 37px;
+  padding: 9px 0px;
+  min-inline-size: 130px;
   transition: box-shadow 0.3s;
   z-index: 1;
   overflow: hidden;
@@ -228,6 +231,7 @@ button {
 }
 
 .button__text {
+  text-transform: uppercase;
   font-family: var(--accent-font);
   font-size: 14px;
   position: relative;
@@ -236,10 +240,9 @@ button {
   color: var(--blend-color);
 }
 
-
 .card__icon-button {
   border: 2.5px solid transparent;
-  transition: .3s ease outline;
+  transition: 0.3s ease outline;
 }
 
 .card__icon-button:focus {
@@ -249,8 +252,6 @@ button {
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
 }
-
-
 
 .save-button {
   outline: 1px solid var(--accent-color);
@@ -299,7 +300,6 @@ button {
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--blend-color);
-
 }
 
 @media (375px <= width < 1440px) {
@@ -322,19 +322,18 @@ button {
 .card__icon-button .core {
   fill: transparent;
   transition-property: fill;
-  transition-delay: .03s;
-  
+  transition-delay: 0.03s;
 }
 
 .card__icon-button:hover .core {
   fill: var(--accent-color);
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button .main-body {
   fill: transparent;
   transition-property: fill;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .card__icon-button:hover .main-body {
@@ -344,7 +343,7 @@ button {
 
 .card__icon-button:active .core {
   fill: var(--fill-color);
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:active .main-body {
@@ -352,24 +351,100 @@ button {
   transition: fill 0.3s 0.05s;
 }
 
-
-.card__icon-button.is-liked .core {
+.like-icon.is-liked .core {
   fill: var(--fill-color);
-  transition: fill .3s linear;
+  transition: fill 0.3s linear;
 }
 
-.card__icon-button.is-liked .main-body {
+.like-icon.is-liked .main-body {
   fill: var(--fill-color);
   transition: fill 0.3s 0.05s;
 }
 
+.like-icon.is-liked .contour {
+  fill: var(--fill-color);
+  transition: fill 0.3s 0.06s;
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.5;
+  }
+}
+
+.like-icon.is-liked .heart {
+  animation: 0.3s ease-in 0.1s 2 alternate scale;
+}
+
+@keyframes bling {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: 0.3s ease-in 0.3s 2 alternate bling;
+}
+
+.dialog-floppy {
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--blend-color);
+}
+
+dialog {
+  padding: 0;
+  border: none;
+  background-color: var(--background-color);
+  outline: 2px solid var(--accent-color);
+  inline-size: 341px;
+  padding-top: 30px;
+  padding-left: 42px;
+  padding-right: 42px;
+  display: grid;
+  gap: 30px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+.dialog-text {
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.dialog-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-button {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  color: var(--accent-color);
+  outline: 2px solid var(--accent-color);
+  padding: 12.5px 114.5px;
+  margin-block-end: 30px;
+  cursor: pointer;
+}
 
 
-
-
-
-
-
-
-
-
+.like-icon.is-liked > .card__like-button   {
+  padding: 0;
+}

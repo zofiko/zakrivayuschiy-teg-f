@@ -139,7 +139,7 @@ button {
 
 .main-content {
   display: grid;
-  gap: 53px;
+  gap: 48px;
   inline-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
 }
 
@@ -175,11 +175,13 @@ button {
 
 .image-wrapper {
   position: relative;
-  mix-blend-mode: hard-light;
+/* 
+  mix-blend-mode: hard-light; */
 }
 
 .label-text {
   color: var(--accent-color);
+z-index: 1;
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: 25px;
@@ -204,7 +206,7 @@ button {
   justify-self: end;
   place-items: center;
   min-inline-size: 169px;
-  margin-block-start: 10px;
+  margin-block-start: 5px;
   margin-block-end: 13px;
   margin-inline-end: 25px;
 }
@@ -214,7 +216,7 @@ button {
   display: grid;
   justify-content: center;
   outline: 1px solid var(--accent-color);
-  padding: 9px 0px;
+  padding: 10px 0px;
   min-inline-size: 130px;
   transition: box-shadow 0.3s;
   z-index: 1;
@@ -243,7 +245,7 @@ button {
 .card__icon-button {
   border: 2.5px solid transparent;
   transition: 0.3s ease outline;
-  padding-top: 14px;
+  padding-top: 19px;
 }
 
 .card__icon-button:focus {
@@ -303,7 +305,7 @@ button {
   color: var(--blend-color);
 }
 
-@media (375px <= width < 1440px) {
+@media (375px <= width < 1400px) {
   .save-button {
     display: flex;
     flex-direction: column;
@@ -447,6 +449,26 @@ dialog:not([open]) {
 }
 
 
-.like-icon.is-liked > .card__like-button   {
-  padding: 0;
+
+.picture-one {
+  filter:  hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+
+}
+
+.picture-two {
+  filter: hue-rotate(300deg) saturate(200%) drop-shadow(0 0 3rem var(--accent-color)) ;
+
+
+}
+
+.picture-three {
+
+}
+
+.picture-four {
+
+}
+
+.picture-five {
+
 }

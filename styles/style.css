@@ -7,6 +7,7 @@
   background-size: cover;
   display: grid;
   place-items: center;
+  font-variation-settings: "wght" var(--main-content-font-weight);
 }
 
 @supports (font-variation-settings: normal) {
@@ -289,6 +290,7 @@ button {
 }
 
 @media (width <= 375px) {
+  
   .save-button {
     display: flex;
     flex-direction: column; 

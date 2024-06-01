@@ -455,25 +455,25 @@ dialog:not([open]) {
 }
 
 .picture-three {
-  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+  filter: hue-rotate(301deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-four {
-  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+  filter: hue-rotate(302deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-five {
-  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+  filter: hue-rotate(303deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-six {
-  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+  filter: hue-rotate(304deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-seven {
-  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+  filter: hue-rotate(305deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-eight {
-  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+  filter: hue-rotate(306deg) drop-shadow(0 0 3rem var(--accent-color));
 }

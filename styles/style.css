@@ -175,13 +175,12 @@ button {
 
 .image-wrapper {
   position: relative;
-/* 
-  mix-blend-mode: hard-light; */
+  mix-blend-mode: hard-light;
 }
 
 .label-text {
   color: var(--accent-color);
-z-index: 1;
+  z-index: 1;
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: 25px;
@@ -198,7 +197,6 @@ z-index: 1;
     text-shadow: none;
   }
 }
-
 
 .card-wrapper {
   display: grid;
@@ -321,7 +319,6 @@ z-index: 1;
     inset-inline-end: 13px;
   }
 }
-
 
 .card__icon-button .core {
   fill: transparent;
@@ -448,27 +445,35 @@ dialog:not([open]) {
   cursor: pointer;
 }
 
-
-
 .picture-one {
-  filter:  hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
-
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-two {
-  filter: hue-rotate(300deg) saturate(200%) drop-shadow(0 0 3rem var(--accent-color)) ;
-
-
+  filter: hue-rotate(300deg) saturate(200%)
+    drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-three {
-
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-four {
-
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
 }
 
 .picture-five {
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+}
 
+.picture-six {
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+}
+
+.picture-seven {
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
+}
+
+.picture-eight {
+  filter: hue-rotate(300deg) drop-shadow(0 0 3rem var(--accent-color));
 }
